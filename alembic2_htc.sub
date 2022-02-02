@@ -1,0 +1,15 @@
+executable = alembic2_HTC.sh
+arguments = $(csv)
+
+getenv = True
+
+transfer_input_files = $(csv), calculate_gap_lengths.pl
+transfer_output_files = $(csv)_dir
+
+output = $(csv).out
+error = $(csv).err
+log = $(csv).log
+request_cpus = 1
+request_memory = 1GB
+request_disk = 1GB
+queue csv matching *.csv

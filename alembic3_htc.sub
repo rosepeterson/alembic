@@ -1,0 +1,10 @@
+executable = alembic3.sh
+arguments = $(csv)
+transfer_input_files = $(csv), alembic3.sh, alembic_joins_final.pl
+output = $(csv).al3.out
+error = $(csv).al3.err
+log = $(csv).al3.log
+request_cpus = 1
+request_memory = 1GB
+request_disk = 1GB
+queue csv matching *.csv
